@@ -18,9 +18,13 @@ Caffe has already been included in 'external/caffe' and follow the below steps t
 ### Possible Errors
 1. '.../+caffe/private/caffe_.mexa64':
     .../+caffe/private/caffe_.mexa64: undefined symbol: _ZN2cv8imencodeE....
+    
 Error in caffe.set_mode_cpu (line ...)
+
 caffe_('set_mode_cpu');
+
 Error in caffe.run_tests (line ...)
+
 caffe.set_mode_cpu();
 
 solution: see https://github.com/BVLC/caffe/issues/3934
