@@ -1,44 +1,37 @@
-# MTCNN_face_detection_alignment
-Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Neural Networks
+# Face detection using MTCNN
+This work implements [1] to detect faces, mainly based on [2]. See principles in [1] and original implementation of [1] in [2]. 
 
 ### Requirement
 1. Caffe: Linux OS: https://github.com/BVLC/caffe. Windows OS: https://github.com/BVLC/caffe/tree/windows or https://github.com/happynear/caffe-windows 
 2. Pdollar toolbox: https://github.com/pdollar/toolbox
 3. Matlab 2014b or later
-4. Cuda (if use nvidia gpu)
 
-### Results
-![image](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/examples.png)
-![image](https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/result.png)
+### System
+Ubuntu 16.04
 
-### Other implementation
-[C++ & caffe ](https://github.com/happynear/MTCNN_face_detection_alignment) (strongly recommend)<br>
-[Python & mxnet](https://github.com/pangyupo/mxnet_mtcnn_face_detection)<br>
-[Python & caffe](https://github.com/DuinoDu/mtcnn)
+### Caffe Installation
+Caffe has already been included in 'external/caffe' and follow the below steps to install caffe with only CPU:
+(1) Change directory to 'external/caffe/' and change 'MATLAB_DIR' in 'Makefile.config' to the path of your own matlab. 
+E.g., MATLAB_DIR := path/to/my/matlab
+(2) Run 'make clean' in your terminal before compile.
+(3) Run 'make -j8 && make matcaffe' to compile caffe.
 
-### Face Recognition 
-Here we strongly recommend [Center Face](https://github.com/ydwen/caffe-face), which is an effective and efficient open-source tool for face recognition.
+### Possible Errors
+(1) '.../+caffe/private/caffe_.mexa64':
+    .../+caffe/private/caffe_.mexa64: undefined symbol: _ZN2cv8imencodeE....
+Error in caffe.set_mode_cpu (line ...)
+caffe_('set_mode_cpu');
+Error in caffe.run_tests (line ...)
+caffe.set_mode_cpu();
 
-### Citation
-    @article{7553523,
-        author={K. Zhang and Z. Zhang and Z. Li and Y. Qiao}, 
-        journal={IEEE Signal Processing Letters}, 
-        title={Joint Face Detection and Alignment Using Multitask Cascaded Convolutional Networks}, 
-        year={2016}, 
-        volume={23}, 
-        number={10}, 
-        pages={1499-1503}, 
-        keywords={Benchmark testing;Computer architecture;Convolution;Detectors;Face;Face detection;Training;Cascaded convolutional neural network (CNN);face alignment;face detection}, 
-        doi={10.1109/LSP.2016.2603342}, 
-        ISSN={1070-9908}, 
-        month={Oct}
-    }
+solution: see https://github.com/BVLC/caffe/issues/3934
 
 ### License
 This code is distributed under MIT LICENSE
 
+### Reference
+[1] Zhang, Kaipeng, Zhanpeng Zhang, Zhifeng Li, and Yu Qiao. "Joint Face Detection and Alignment Using Multitask Cascaded Convolutional Networks." IEEE Signal Processing Letters 23, no. 10 (2016): 1499-1503.
+[2] https://github.com/kpzhang93/MTCNN_face_detection_alignment.
+
 ### Contact
-Yu Qiao
-yu.qiao@siat.ac.cn<br>
-Kaipeng Zhang
-kpzhang@cmlab.csie.ntu.edu.tw
+Rui Zhang: u5963436@anu.edu.au | zhangrui0996@qq.com
