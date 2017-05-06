@@ -30,8 +30,12 @@ Caffe has already been included in 'external/caffe' and follow the below steps t
 
      caffe.set_mode_cpu();
 
-solution: see https://github.com/BVLC/caffe/issues/3934
+ solution: see https://github.com/BVLC/caffe/issues/3934
 
+2. version 'GLIBCXX_3.4.9' not found
+
+ solution: type 'LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 matlab' in terminal to open matlab.
+ 
 ### License
 This code is distributed under MIT LICENSE
 
