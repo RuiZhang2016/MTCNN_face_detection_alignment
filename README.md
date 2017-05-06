@@ -17,15 +17,18 @@ Caffe has already been included in 'external/caffe' and follow the below steps t
 
 ### Possible Errors
 1. '.../+caffe/private/caffe_.mexa64':
-    .../+caffe/private/caffe_.mexa64: undefined symbol: _ZN2cv8imencodeE....
+
+    .../+caffe/private/caffe_.mexa64: 
     
-Error in caffe.set_mode_cpu (line ...)
+    undefined symbol: _ZN2cv8imencodeE....
+   
+    Error in caffe.set_mode_cpu (line ...)
 
-caffe_('set_mode_cpu');
+    caffe_('set_mode_cpu');
 
-Error in caffe.run_tests (line ...)
+     Error in caffe.run_tests (line ...)
 
-caffe.set_mode_cpu();
+     caffe.set_mode_cpu();
 
 solution: see https://github.com/BVLC/caffe/issues/3934
 
@@ -34,6 +37,7 @@ This code is distributed under MIT LICENSE
 
 ### Reference
 [1] Zhang, Kaipeng, Zhanpeng Zhang, Zhifeng Li, and Yu Qiao. "Joint Face Detection and Alignment Using Multitask Cascaded Convolutional Networks." IEEE Signal Processing Letters 23, no. 10 (2016): 1499-1503.
+
 [2] https://github.com/kpzhang93/MTCNN_face_detection_alignment.
 
 ### Contact
