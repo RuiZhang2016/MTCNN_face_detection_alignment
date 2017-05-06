@@ -11,13 +11,12 @@ Ubuntu 16.04
 
 ### Caffe Installation
 Caffe has already been included in 'external/caffe' and follow the below steps to install caffe with only CPU:
-(1) Change directory to 'external/caffe/' and change 'MATLAB_DIR' in 'Makefile.config' to the path of your own matlab. 
-E.g., MATLAB_DIR := path/to/my/matlab
-(2) Run 'make clean' in your terminal before compile.
-(3) Run 'make -j8 && make matcaffe' to compile caffe.
+1. Change directory to 'external/caffe/' and change 'MATLAB_DIR' in 'Makefile.config' to the path of your own matlab. E.g., MATLAB_DIR := path/to/my/matlab
+2. Run 'make clean' in your terminal before compile.
+3. Run 'make -j8 && make matcaffe' to compile caffe.
 
 ### Possible Errors
-(1) '.../+caffe/private/caffe_.mexa64':
+1. '.../+caffe/private/caffe_.mexa64':
     .../+caffe/private/caffe_.mexa64: undefined symbol: _ZN2cv8imencodeE....
 Error in caffe.set_mode_cpu (line ...)
 caffe_('set_mode_cpu');
